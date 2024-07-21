@@ -7,13 +7,28 @@
 nav{
     background-color: rgb(175, 180, 175);
     padding: 12px 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0 23px;
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
 }
 ul {
     display: flex;
+    margin: 0 23px;
+    align-items: center;
 }
 ul li{
     list-style: none;
     margin: 0 13px;
+    cursor: pointer;
+}
+ul li:hover{
+    color: white;
 }
 table{
     border: 2px solid black;
