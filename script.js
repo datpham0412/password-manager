@@ -6,6 +6,22 @@ function maskPassword(pass) {
   return str;
 }
 
+function copyText(txt) {
+  navigator.clipboard.writeText(txt).then(
+    () => {
+      // clipboard successfully set
+      document.getElementById("alert").style.display = "inline";
+      setTimeout(() => {
+        document.getElementById("alert").style.display = "none";
+      }, 2000);
+    },
+    () => {
+      // clipboard write failed
+      alert("Clipboard copying failed");
+    }
+  );
+}
+
 document.querySelector(".btn").addEventListener("click", (e) => {
   e.preventDefault();
   console.log("Hello feng");
