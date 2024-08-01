@@ -22,6 +22,17 @@ function copyText(txt) {
   );
 }
 
+const deletePassword = (website) => {
+  let data = localStorage.getItem("passwords");
+  let arr = JSON.parse(data);
+  arrUpdated = arr.filter((e) => {
+    return e.website != website;
+  });
+  localStorage.setItem("passwords", JSON.stringify(arrUpdated));
+  alert(`Successfully deleted ${website}'s password`);
+  showPasswords();
+};
+
 document.querySelector(".btn").addEventListener("click", (e) => {
   e.preventDefault();
   console.log("Hello feng");
